@@ -1,48 +1,1102 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr" data-nav-layout="horizontal" data-nav-style="menu-click" data-menu-position="fixed" data-theme-mode="light">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Welcome to Kedabar</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 2rem;
-      background: #f9f9f9;
-      color: #222;
-    }
-    header {
-      text-align: center;
-      margin-bottom: 2rem;
-    }
-    h1 {
-      color: #3161b0;
-    }
-    main {
-      background: #fff;
-      padding: 2rem;
-      border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-      max-width: 600px;
-      margin: 0 auto;
-    }
-    footer {
-      text-align: center;
-      margin-top: 2rem;
-      color: #999;
-      font-size: 0.9em;
-    }
-  </style>
+
+    <!-- Meta Data -->
+    <meta charset="UTF-8">
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, user-scalable=0'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title> Kedai Dadar Barenda </title>
+    <meta name="Description" content="Estetiknya dapat, Dompet aman!">
+    <meta name="Author" content="Kedai Dadar Barenda">
+
+    <!-- Favicon -->
+    <link rel="icon" href="../assets/images/brand-logos/favicon.ico" type="image/x-icon">
+
+    <!-- Bootstrap Css -->
+    <link id="style" href="../assets/libs/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Style Css -->
+    <link href="../assets/css/styles.css" rel="stylesheet">
+
+    <!-- Icons Css -->
+    <link href="../assets/css/icons.css" rel="stylesheet">
+
+    <!-- Node Waves Css -->
+    <link href="../assets/libs/node-waves/waves.min.css" rel="stylesheet">
+
+    <!-- SwiperJS Css -->
+    <link rel="stylesheet" href="../assets/libs/swiper/swiper-bundle.min.css">
+
+    <!-- Color Picker Css -->
+    <link rel="stylesheet" href="../assets/libs/flatpickr/flatpickr.min.css">
+    <link rel="stylesheet" href="../assets/libs/@simonwep/pickr/themes/nano.min.css">
+
+    <!-- Choices Css -->
+    <link rel="stylesheet" href="../assets/libs/choices.js/public/assets/styles/choices.min.css">
+
+    <script>
+        if (localStorage.ynexlandingdarktheme) {
+            document.querySelector("html").setAttribute("data-theme-mode", "dark")
+        }
+        if (localStorage.ynexlandingrtl) {
+            document.querySelector("html").setAttribute("dir", "rtl")
+            document.querySelector("#style")?.setAttribute("href", "../assets/libs/bootstrap/css/bootstrap.rtl.min.css");
+        }
+    </script>
+
+
 </head>
-<body>
-  <header>
-    <h1>Welcome to Kedabar</h1>
-  </header>
-  <main>
-    <p>Comming soon!</p>
-  </main>
-  <footer>
-    &copy; 2025 Kedabar
-  </footer>
+
+<body class="landing-body">
+
+    <!-- Start Switcher -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="switcher-canvas" aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas-header border-bottom">
+            <h5 class="offcanvas-title" id="offcanvasRightLabel">Switcher</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div class="">
+                <p class="switcher-style-head">Theme Color Mode:</p>
+                <div class="row switcher-style">
+                    <div class="col-4">
+                        <div class="form-check switch-select">
+                            <label class="form-check-label" for="switcher-light-theme">
+                                Light
+                            </label>
+                            <input class="form-check-input" type="radio" name="theme-style" id="switcher-light-theme" checked>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="form-check switch-select">
+                            <label class="form-check-label" for="switcher-dark-theme">
+                                Dark
+                            </label>
+                            <input class="form-check-input" type="radio" name="theme-style" id="switcher-dark-theme">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="">
+                <p class="switcher-style-head">Directions:</p>
+                <div class="row switcher-style">
+                    <div class="col-4">
+                        <div class="form-check switch-select">
+                            <label class="form-check-label" for="switcher-ltr">
+                                LTR
+                            </label>
+                            <input class="form-check-input" type="radio" name="direction" id="switcher-ltr" checked>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="form-check switch-select">
+                            <label class="form-check-label" for="switcher-rtl">
+                                RTL
+                            </label>
+                            <input class="form-check-input" type="radio" name="direction" id="switcher-rtl">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="theme-colors">
+                <p class="switcher-style-head">Theme Primary:</p>
+                <div class="d-flex align-items-center switcher-style">
+                    <div class="form-check switch-select me-3">
+                        <input class="form-check-input color-input color-primary-1" type="radio" name="theme-primary" id="switcher-primary">
+                    </div>
+                    <div class="form-check switch-select me-3">
+                        <input class="form-check-input color-input color-primary-2" type="radio" name="theme-primary"
+                            id="switcher-primary1">
+                    </div>
+                    <div class="form-check switch-select me-3">
+                        <input class="form-check-input color-input color-primary-3" type="radio" name="theme-primary"
+                            id="switcher-primary2">
+                    </div>
+                    <div class="form-check switch-select me-3">
+                        <input class="form-check-input color-input color-primary-4" type="radio" name="theme-primary"
+                            id="switcher-primary3">
+                    </div>
+                    <div class="form-check switch-select me-3">
+                        <input class="form-check-input color-input color-primary-5" type="radio" name="theme-primary"
+                            id="switcher-primary4">
+                    </div>
+                    <div class="form-check switch-select me-3 ps-0 mt-1 color-primary-light">
+                        <div class="theme-container-primary"></div>
+                        <div class="pickr-container-primary"></div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <p class="switcher-style-head">reset:</p>
+                <div class="text-center">
+                    <button id="reset-all" class="btn btn-danger mt-3">Reset</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Switcher -->
+
+    <div class="landing-page-wrapper">
+
+        <!-- app-header -->
+        <header class="app-header">
+
+            <!-- Start::main-header-container -->
+            <div class="main-header-container container-fluid">
+
+                <!-- Start::header-content-left -->
+                <div class="header-content-left">
+
+                    <!-- Start::header-element -->
+                    <div class="header-element">
+                        <div class="horizontal-logo">
+                            <a href="index.html" class="header-logo">
+                                <img src="../assets/images/brand-logos/logo.png" alt="logo" class="toggle-logo">
+                                <img src="../assets/images/brand-logos/logo.png" alt="logo" class="toggle-dark">
+                            </a>
+                        </div>
+                    </div>
+                    <!-- End::header-element -->
+
+                    <!-- Start::header-element -->
+                    <div class="header-element">
+                        <!-- Start::header-link -->
+                        <a href="javascript:void(0);" class="sidemenu-toggle header-link" data-bs-toggle="sidebar">
+                            <span class="open-toggle">
+                                <i class="ri-menu-3-line fs-20"></i>
+                            </span>
+                        </a>
+                        <!-- End::header-link -->
+                    </div>
+                    <!-- End::header-element -->
+
+                </div>
+                <!-- End::header-content-left -->
+
+                <!-- Start::header-content-right -->
+                <div class="header-content-right">
+
+                    <!-- Start::header-element -->
+                    <div class="header-element align-items-center">
+                        <!-- Start::header-link|switcher-icon -->
+                        <div class="btn-list d-lg-none d-block">
+                            <a href="#" class="btn btn-primary-light pulse">
+                                New!
+                            </a>
+                        </div>
+                        <!-- End::header-link|switcher-icon -->
+                    </div>
+                    <!-- End::header-element -->
+
+                </div>
+                <!-- End::header-content-right -->
+
+            </div>
+            <!-- End::main-header-container -->
+
+        </header>
+        <!-- /app-header -->
+
+        <!-- Start::app-sidebar -->
+        <aside class="app-sidebar sticky" id="sidebar">
+
+            <div class="container-xl">
+                <!-- Start::main-sidebar -->
+                <div class="main-sidebar">
+
+                    <!-- Start::nav -->
+                    <nav class="main-menu-container nav nav-pills sub-open">
+                        <div class="landing-logo-container">
+                            <div class="horizontal-logo">
+                                <a href="index.html" class="header-logo">
+                                    <img src="../assets/images/brand-logos/logo.png" alt="logo" class="desktop-logo">
+                                    <img src="../assets/images/brand-logos/logo.png" alt="logo" class="desktop-white">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="slide-left" id="slide-left"><svg xmlns="http://www.w3.org/2000/svg" fill="#7b8191" width="24"
+                                height="24" viewBox="0 0 24 24">
+                                <path d="M13.293 6.293 7.586 12l5.707 5.707 1.414-1.414L10.414 12l4.293-4.293z"></path>
+                            </svg></div>
+                        <ul class="main-menu">
+                            <!-- Start::slide -->
+                            <li class="slide">
+                                <a class="side-menu__item" href="#home">
+                                    <span class="side-menu__label">Home</span>
+                                </a>
+                            </li>
+                            <!-- End::slide -->
+                            <!-- Start::slide -->
+                            <li class="slide">
+                                <a href="#hot-deals" class="side-menu__item">
+                                    <span class="side-menu__label">Hot Deals</span>
+                                </a>
+                            </li>
+                            <!-- End::slide -->
+                            <!-- Start::slide -->
+                            <li class="slide">
+                                <a href="#follow-us" class="side-menu__item">
+                                    <span class="side-menu__label">Follow Us</span>
+                                </a>
+                            </li>
+                            <!-- End::slide -->
+                            <!-- Start::slide -->
+                            <li class="slide">
+                                <a href="#food" class="side-menu__item">
+                                    <span class="side-menu__label">Food</span>
+                                </a>
+                            </li>
+                            <!-- End::slide -->
+                            <!-- Start::slide -->
+                            <li class="slide">
+                                <a href="#drinks" class="side-menu__item">
+                                    <span class="side-menu__label">Drinks</span>
+                                </a>
+                            </li>
+                            <!-- End::slide -->
+                            <!-- Start::slide -->
+                            <li class="slide">
+                                <a href="#snacks" class="side-menu__item">
+                                    <span class="side-menu__label">Snacks</span>
+                                </a>
+                            </li>
+                            <!-- End::slide -->
+                            <!-- Start::slide -->
+                            <li class="slide">
+                                <a href="#find-us" class="side-menu__item">
+                                    <span class="side-menu__label">Find Us</span>
+                                </a>
+                            </li>
+                            <!-- End::slide -->
+                            <!-- Start::slide -->
+                            <li class="slide">
+                                <a href="#contact" class="side-menu__item">
+                                    <span class="side-menu__label">Contact</span>
+                                </a>
+                            </li>
+                            <!-- End::slide -->
+
+                        </ul>
+                        <div class="slide-right" id="slide-right"><svg xmlns="http://www.w3.org/2000/svg" fill="#7b8191" width="24"
+                                height="24" viewBox="0 0 24 24">
+                                <path d="M10.707 17.707 16.414 12l-5.707-5.707-1.414 1.414L13.586 12l-4.293 4.293z"></path>
+                            </svg></div>
+                        <div class="d-lg-flex d-none">
+                            <div class="btn-list d-lg-flex d-none mt-lg-2 mt-xl-0 mt-0">
+                                <a href="#" class="btn btn-wave btn-primary pulse">
+                                    New
+                                </a>
+                            </div>
+                        </div>
+                    </nav>
+                    <!-- End::nav -->
+
+                </div>
+                <!-- End::main-sidebar -->
+            </div>
+
+        </aside>
+        <!-- End::app-sidebar -->
+
+        <!-- Start::app-content -->
+        <div class="main-content landing-main px-0">
+
+            <!-- Start:: Section-1 -->
+            <div class="landing-banner" id="home">
+                <section class="section">
+                    <div class="container main-banner-container pb-lg-0">
+                        <div class="row">
+                            <div class="col-xxl-7 col-xl-7 col-lg-7 col-md-8">
+                                <div class="py-lg-5">
+                                    <div class="mb-3">
+                                        <h5 class="fw-semibold text-fixed-white op-9">Ektetiknya dapat, Dompet aman</h5>
+                                    </div>
+                                    <p class="landing-banner-heading mb-3">#1 Goal, Save Money <span class="text-secondary">KeDaBar!</span>
+                                    </p </div>
+                                </div>
+                                <!-- <div class="col-xxl-5 col-xl-5 col-lg-5 col-md-4">
+                                    <div class="text-end landing-main-image landing-heading-img">
+                                        <img src="../assets/images/media/landing/food1.jpg" alt="" class="img-fluid">
+                                    </div>
+                                </div> -->
+                            </div>
+                        </div>
+                </section>
+            </div>
+            <!-- End:: Section-1 -->
+
+            <!-- Start:: Section-2 -->
+            <section class="section landing-testimonials section-bg" id="hot-deals">
+                <div class="container text-center">
+                    <p class="fs-12 fw-semibold text-success mb-1"><span class="landing-section-heading">HOT DEALS</span></p>
+                    <h3 class="fw-semibold mb-2">We never failed to reach expectations</h3>
+                    <div class="row justify-content-center">
+                        <div class="col-xl-7">
+                            <p class="text-muted fs-15 mb-5 fw-normal">High demand</p>
+                        </div>
+                    </div>
+                    <div class="swiper pagination-dynamic text-start">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="card custom-card testimonial-card">
+                                    <div class="card-body">
+                                        <div class="d-flex align-items-center mb-3">
+                                            <span class="avatar avatar-md avatar-rounded me-3">
+                                                <img src="../assets/images/faces/15.jpg" alt="">
+                                            </span>
+                                            <div>
+                                                <p class="mb-0 fw-semibold fs-14">Mokadabar</p>
+                                                <p class="mb-0 fs-10 fw-semibold text-muted">Drinks</p>
+                                            </div>
+                                        </div>
+                                        <div class="mb-3">
+                                            <span class="text-muted">- Coffee --</span>
+                                        </div>
+                                        <div class="d-flex align-items-center justify-content-between">
+                                            <div class="d-flex align-items-center">
+                                                <span class="text-muted">Rating : </span>
+                                                <span class="text-warning d-block ms-1">
+                                                    <i class="ri-star-fill"></i>
+                                                    <i class="ri-star-fill"></i>
+                                                    <i class="ri-star-fill"></i>
+                                                    <i class="ri-star-fill"></i>
+                                                    <i class="ri-star-half-fill"></i>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="card custom-card testimonial-card">
+                                    <div class="card-body">
+                                        <div class="d-flex align-items-center mb-3">
+                                            <span class="avatar avatar-md avatar-rounded me-3">
+                                                <img src="../assets/images/faces/4.jpg" alt="">
+                                            </span>
+                                            <div>
+                                                <p class="mb-0 fw-semibold fs-14">Kopi Gulmer</p>
+                                                <p class="mb-0 fs-10 fw-semibold text-muted">Drinks</p>
+                                            </div>
+                                        </div>
+                                        <div class="mb-3">
+                                            <span class="text-muted">- Coffee --</span>
+                                        </div>
+                                        <div class="d-flex align-items-center justify-content-between">
+                                            <div class="d-flex align-items-center">
+                                                <span class="text-muted">Rating : </span>
+                                                <span class="text-warning d-block ms-1">
+                                                    <i class="ri-star-fill"></i>
+                                                    <i class="ri-star-fill"></i>
+                                                    <i class="ri-star-fill"></i>
+                                                    <i class="ri-star-fill"></i>
+                                                    <i class="ri-star-half-fill"></i>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="card custom-card testimonial-card">
+                                    <div class="card-body">
+                                        <div class="d-flex align-items-center mb-3">
+                                            <span class="avatar avatar-md avatar-rounded me-3">
+                                                <img src="../assets/images/faces/2.jpg" alt="">
+                                            </span>
+                                            <div>
+                                                <p class="mb-0 fw-semibold fs-14">Matcha Latte</p>
+                                                <p class="mb-0 fs-10 fw-semibold text-muted">Drinks</p>
+                                            </div>
+                                        </div>
+                                        <div class="mb-3">
+                                            <span class="text-muted">- Non Coffee --</span>
+                                        </div>
+                                        <div class="d-flex align-items-center justify-content-between">
+                                            <div class="d-flex align-items-center">
+                                                <span class="text-muted">Rating : </span>
+                                                <span class="text-warning d-block ms-1">
+                                                    <i class="ri-star-fill"></i>
+                                                    <i class="ri-star-fill"></i>
+                                                    <i class="ri-star-fill"></i>
+                                                    <i class="ri-star-fill"></i>
+                                                    <i class="ri-star-line"></i>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="card custom-card testimonial-card">
+                                    <div class="card-body">
+                                        <div class="d-flex align-items-center mb-3">
+                                            <span class="avatar avatar-md avatar-rounded me-3">
+                                                <img src="../assets/images/faces/10.jpg" alt="">
+                                            </span>
+                                            <div>
+                                                <p class="mb-0 fw-semibold fs-14">Jinggo Kedabar</p>
+                                                <p class="mb-0 fs-10 fw-semibold text-muted">Food</p>
+                                            </div>
+                                        </div>
+                                        <div class="mb-3">
+                                            <span class="text-muted">- Nasi Jinggo Kedabar --</span>
+                                        </div>
+                                        <div class="d-flex align-items-center justify-content-between">
+                                            <div class="d-flex align-items-center">
+                                                <span class="text-muted">Rating : </span>
+                                                <span class="text-warning d-block ms-1">
+                                                    <i class="ri-star-fill"></i>
+                                                    <i class="ri-star-fill"></i>
+                                                    <i class="ri-star-fill"></i>
+                                                    <i class="ri-star-fill"></i>
+                                                    <i class="ri-star-half-fill"></i>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="card custom-card testimonial-card">
+                                    <div class="card-body">
+                                        <div class="d-flex align-items-center mb-3">
+                                            <span class="avatar avatar-md avatar-rounded me-3">
+                                                <img src="../assets/images/faces/12.jpg" alt="">
+                                            </span>
+                                            <div>
+                                                <p class="mb-0 fw-semibold fs-14">Tuna Rabe Rica</p>
+                                                <p class="mb-0 fs-10 fw-semibold text-muted">Food</p>
+                                            </div>
+                                        </div>
+                                        <div class="mb-3">
+                                            <span class="text-muted">- Nasi Kedabar Tuna Rabe Rica --</span>
+                                        </div>
+                                        <div class="d-flex align-items-center justify-content-between">
+                                            <div class="d-flex align-items-center">
+                                                <span class="text-muted">Rating : </span>
+                                                <span class="text-warning d-block ms-1">
+                                                    <i class="ri-star-fill"></i>
+                                                    <i class="ri-star-fill"></i>
+                                                    <i class="ri-star-fill"></i>
+                                                    <i class="ri-star-fill"></i>
+                                                    <i class="ri-star-line"></i>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="card custom-card testimonial-card">
+                                    <div class="card-body">
+                                        <div class="d-flex align-items-center mb-3">
+                                            <span class="avatar avatar-md avatar-rounded me-3">
+                                                <img src="../assets/images/faces/3.jpg" alt="">
+                                            </span>
+                                            <div>
+                                                <p class="mb-0 fw-semibold fs-14">Pisang Goroho</p>
+                                                <p class="mb-0 fs-10 fw-semibold text-muted">Snacks</p>
+                                            </div>
+                                        </div>
+                                        <div class="mb-3">
+                                            <span class="text-muted">- Pisang Goroho Sticks Rica Roa --</span>
+                                        </div>
+                                        <div class="d-flex align-items-center justify-content-between">
+                                            <div class="d-flex align-items-center">
+                                                <span class="text-muted">Rating : </span>
+                                                <span class="text-warning d-block ms-1">
+                                                    <i class="ri-star-fill"></i>
+                                                    <i class="ri-star-fill"></i>
+                                                    <i class="ri-star-fill"></i>
+                                                    <i class="ri-star-fill"></i>
+                                                    <i class="ri-star-half-fill"></i>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination mt-4"></div>
+                    </div>
+                </div>
+            </section>
+            <!-- End:: Section-2 -->
+
+            <!-- Start:: Section-3 -->
+            <section class="section section-bg " id="follow-us">
+                <div class="container text-center position-relative">
+                    <p class="fs-12 fw-semibold text-success mb-1"><span class="landing-section-heading">FOLLOW US</span></p>
+                    <h3 class="fw-semibold mb-2">Social Media</h3>
+                    <div class="row justify-content-center">
+                        <div class="col-xl-7">
+                            <p class="text-muted fs-15 mb-5 fw-normal">We are proud to have you with us.</p>
+                        </div>
+                    </div>
+                    <div class="row  g-2 justify-content-center">
+                        <div class="col-xl-12">
+                            <div class="row justify-content-evenly">
+                                <div class="col-xl-2 col-lg-4 col-md-6 col-sm-6 col-12 mb-3">
+                                    <div class="p-3 text-center rounded-2 bg-white border">
+                                        <span class="mb-3 avatar avatar-lg avatar-rounded bg-primary-transparent">
+                                            <i class='ri-instagram-line fw-bold'></i>
+                                        </span>
+                                        <h3 class="fw-semibold mb-0 text-dark">@kedabar</h3>
+                                        <p class="mb-1 fs-14 op-7 text-muted ">
+                                            instagram
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col-xl-2 col-lg-4 col-md-6 col-sm-6 col-12 mb-3">
+                                    <div class="p-3 text-center rounded-2 bg-white border">
+                                        <span class="mb-3 avatar avatar-lg avatar-rounded bg-primary-transparent">
+                                            <i class='ri-facebook-line fw-bold'></i>
+                                        </span>
+                                        <h3 class="fw-semibold mb-0 text-dark">kedabar</h3>
+                                        <p class="mb-1 fs-14 op-7 text-muted ">
+                                            facebook
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col-xl-2 col-lg-4 col-md-6 col-sm-6 col-12 mb-3">
+                                    <div class="p-3 text-center rounded-2 bg-white border">
+                                        <span class="mb-3 avatar avatar-lg avatar-rounded bg-primary-transparent">
+                                            <i class='ri-youtube-line fw-bold'></i>
+                                        </span>
+                                        <h3 class="fw-semibold mb-0 text-dark">Kedabar</h3>
+                                        <p class="mb-1 fs-14 op-7 text-muted ">
+                                            youtube
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- End:: Section-3 -->
+
+
+            <!-- Start:: Section-4 -->
+            <section class="section section-bg" id="food">
+                <div class="container text-center">
+                    <p class="fs-12 fw-semibold text-success mb-1"><span class="landing-section-heading">FOOD</span></p>
+                    <h3 class="fw-semibold mb-2">Good Food, Good Mood.</h3>
+                    <div class="row justify-content-center">
+                        <div class="col-xl-7">
+                            <p class="text-muted fs-15 mb-5 fw-normal">Save your money.</p>
+                        </div>
+                    </div>
+                    <div class="row text-start">
+                        <div class="col-xl-12">
+                            <div class="row gy-2">
+                                <div class="col-xl-6">
+                                    <div class="accordion accordion-customicon1 accordion-primary accordions-items-seperate"
+                                        id="accordionFAQ1">
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="headingcustomicon1One">
+                                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                                    data-bs-target="#collapsecustomicon1One" aria-expanded="true"
+                                                    aria-controls="collapsecustomicon1One">
+                                                    Nasi Jinggo Kedabar - 8rb
+                                                </button>
+                                            </h2>
+                                            <div id="collapsecustomicon1One" class="accordion-collapse collapse show"
+                                                aria-labelledby="headingcustomicon1One" data-bs-parent="#accordionFAQ1">
+                                                <div class="accordion-body">
+                                                    <strong>Small but Okay</strong>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="headingcustomicon1Two">
+                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                                    data-bs-target="#collapsecustomicon1Two" aria-expanded="false"
+                                                    aria-controls="collapsecustomicon1Two">
+                                                    Nasi Kedabar Ori - 10rb
+                                                </button>
+                                            </h2>
+                                            <div id="collapsecustomicon1Two" class="accordion-collapse collapse"
+                                                aria-labelledby="headingcustomicon1Two" data-bs-parent="#accordionFAQ1">
+                                                <div class="accordion-body">
+                                                    <strong>it original.</strong>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="headingcustomicon1Three">
+                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                                    data-bs-target="#collapsecustomicon1Three" aria-expanded="false"
+                                                    aria-controls="collapsecustomicon1Three">
+                                                    Nasi Kedabar Ayam Suwir - 15rb
+                                                </button>
+                                            </h2>
+                                            <div id="collapsecustomicon1Three" class="accordion-collapse collapse"
+                                                aria-labelledby="headingcustomicon1Three" data-bs-parent="#accordionFAQ1">
+                                                <div class="accordion-body">
+                                                    <strong>tagline.</strong> desc
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="headingcustomicon1Four">
+                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                                    data-bs-target="#collapsecustomicon1Four" aria-expanded="false"
+                                                    aria-controls="collapsecustomicon1Four">
+                                                    Nasi Kedabar Ampela - 15rb
+                                                </button>
+                                            </h2>
+                                            <div id="collapsecustomicon1Four" class="accordion-collapse collapse"
+                                                aria-labelledby="headingcustomicon1Four" data-bs-parent="#accordionFAQ1">
+                                                <div class="accordion-body">
+                                                    <strong>This is the first item's accordion body.</strong>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="headingcustomicon1Five">
+                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                                    data-bs-target="#collapsecustomicon1Five" aria-expanded="false"
+                                                    aria-controls="collapsecustomicon1Five">
+                                                    Nasi Kedabar Kulit -15rb
+                                                </button>
+                                            </h2>
+                                            <div id="collapsecustomicon1Five" class="accordion-collapse collapse"
+                                                aria-labelledby="headingcustomicon1Five" data-bs-parent="#accordionFAQ1">
+                                                <div class="accordion-body">
+                                                    Description ...
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="headingcustomicon1Six">
+                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                                    data-bs-target="#collapsecustomicon1Six" aria-expanded="false"
+                                                    aria-controls="collapsecustomicon1Six">
+                                                    Nasi Kedabar Tuna Rabe Rica - 15rb
+                                                </button>
+                                            </h2>
+                                            <div id="collapsecustomicon1Six" class="accordion-collapse collapse"
+                                                aria-labelledby="headingcustomicon1Six" data-bs-parent="#accordionFAQ1">
+                                                <div class="accordion-body">
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-6">
+                                    <div class="accordion accordion-customicon1 accordion-primary accordions-items-seperate"
+                                        id="accordionFAQ2">
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="headingcustomicon2Five">
+                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                                    data-bs-target="#collapsecustomicon2Five" aria-expanded="false"
+                                                    aria-controls="collapsecustomicon2Five">
+                                                    Nasi Kedabar Penyet - 23rb
+                                                </button>
+                                            </h2>
+                                            <div id="collapsecustomicon2Five" class="accordion-collapse collapse"
+                                                aria-labelledby="headingcustomicon2Five" data-bs-parent="#accordionFAQ2">
+                                                <div class="accordion-body">
+                                                    Abcd...
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="headingcustomicon2Six">
+                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                                    data-bs-target="#collapsecustomicon2Six" aria-expanded="false"
+                                                    aria-controls="collapsecustomicon2Six">
+                                                    Mie Goreng Kedabar - 15rb
+                                                </button>
+                                            </h2>
+                                            <div id="collapsecustomicon2Six" class="accordion-collapse collapse"
+                                                aria-labelledby="headingcustomicon2Six" data-bs-parent="#accordionFAQ2">
+                                                <div class="accordion-body">
+                                                    abcd...
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="headingcustomicon2One">
+                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                                    data-bs-target="#collapsecustomicon2One" aria-expanded="true"
+                                                    aria-controls="collapsecustomicon2One">
+                                                    Mie Kuah Kedabar - 15rb
+                                                </button>
+                                            </h2>
+                                            <div id="collapsecustomicon2One" class="accordion-collapse collapse "
+                                                aria-labelledby="headingcustomicon2One" data-bs-parent="#accordionFAQ2">
+                                                <div class="accordion-body">
+                                                    abcd...
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="headingcustomicon2Two">
+                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                                    data-bs-target="#collapsecustomicon2Two" aria-expanded="false"
+                                                    aria-controls="collapsecustomicon2Two">
+                                                    Nasi Putih - 5rb
+                                                </button>
+                                            </h2>
+                                            <div id="collapsecustomicon2Two" class="accordion-collapse collapse"
+                                                aria-labelledby="headingcustomicon2Two" data-bs-parent="#accordionFAQ2">
+                                                <div class="accordion-body">
+                                                    <strong>Sepiring berdua.</strong>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="headingcustomicon2Three">
+                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                                    data-bs-target="#collapsecustomicon2Three" aria-expanded="false"
+                                                    aria-controls="collapsecustomicon2Three">
+                                                    Dadar Barenda - 5rb
+                                                </button>
+                                            </h2>
+                                            <div id="collapsecustomicon2Three" class="accordion-collapse collapse"
+                                                aria-labelledby="headingcustomicon2Three" data-bs-parent="#accordionFAQ2">
+                                                <div class="accordion-body">
+                                                    abcd ...
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="headingcustomicon2Four">
+                                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                                    data-bs-target="#collapsecustomicon2Four" aria-expanded="false"
+                                                    aria-controls="collapsecustomicon2Four">
+                                                    Topings - 5rb
+                                                </button>
+                                            </h2>
+                                            <div id="collapsecustomicon2Four" class="accordion-collapse collapse show"
+                                                aria-labelledby="headingcustomicon2Four" data-bs-parent="#accordionFAQ2">
+                                                <div class="accordion-body">
+                                                    abcd...
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- End:: Section-4 -->
+
+
+            <!-- Start:: Section-8 -->
+            <section class="section  " id="drinks">
+                <div class="container text-center">
+                    <p class="fs-12 fw-semibold text-success mb-1"><span class="landing-section-heading">DRINKS</span></p>
+                    <h3 class="fw-semibold mb-2">Good Price, Good Taste</h3>
+                    <div class="row justify-content-center">
+                        <div class="col-xl-9">
+                            <p class="text-muted fs-15 mb-5 fw-normal">From the locals.</p>
+                        </div>
+                    </div>
+                    <div class="card custom-card overflow-hidden shadow-none">
+                        <div class="card-body p-0">
+                            <div class="tab-content" id="myTabContent">
+                                <div class="tab-pane show active p-0" id="non-coffee-pane" role="tabpanel" aria-labelledby="non-coffee"
+                                    tabindex="0">
+                                    <div class="row">
+                                        <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-12 border-end border-inline-end-dashed">
+                                            <div class="p-4">
+                                                <h6 class="fw-semibold text-center">Non Coffee</h6>
+                                                <div class="py-4 d-flex align-items-center justify-content-center">
+                                                    <div class="pricing-svg1">
+
+                                                    </div>
+                                                </div>
+                                                <ul class="list-unstyled text-center fs-12 px-3 pt-3 mb-0">
+                                                    <li class="mb-3">
+                                                        <span class="text-muted">Matcha Latte (C/H)<span
+                                                                class="badge bg-light text-default ms-1">17rb</span></span>
+                                                    </li>
+                                                    <li class="mb-3">
+                                                        <span class="text-muted">Thai Tea (C)<span
+                                                                class="badge bg-light text-default ms-1">15rb</span></span>
+                                                    </li>
+                                                    <li class="mb-3">
+                                                        <span class="text-muted">Taro Latte (C)<span
+                                                                class="badge bg-light text-default ms-1">15rb</span></span>
+                                                    </li>
+                                                    <li class="mb-3">
+                                                        <span class="text-muted">Red Velvet Latte (C)<span
+                                                                class="badge bg-light text-default ms-1">15rb</span></span>
+                                                    </li>
+                                                    <li class="mb-3">
+                                                        <span class="text-muted">Chocolate (C/H)<span
+                                                                class="badge bg-light text-default ms-1">15rb</span></span>
+                                                    </li>
+                                                    <li class="mb-3">
+                                                        <span class="text-muted">Teh Manis/ Tawar (C/H)<span
+                                                                class="badge bg-light text-default ms-1">5rb</span></span>
+                                                    </li>
+                                                    <li class="mb-3">
+                                                        <span class="text-muted">Es Lemonade Kedabar<span
+                                                                class="badge bg-light text-default ms-1">5rb</span></span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-12 border-end border-inline-end-dashed">
+                                            <div class="p-4">
+                                                <h6 class="fw-semibold text-center">Coffee</h6>
+                                                <div class="py-4 d-flex align-items-center justify-content-center">
+                                                    <div class="pricing-svg1">
+
+                                                    </div>
+                                                </div>
+                                                <ul class="list-unstyled text-center fs-12 px-3 pt-3 mb-0">
+                                                    <li class="mb-3">
+                                                        <span class="text-muted">Es Kopi Mokadabar<span
+                                                                class="badge bg-light text-default ms-1">17rb</span></span>
+                                                    </li>
+                                                    <li class="mb-3">
+                                                        <span class="text-muted">Es Kopi Susu Gulmer<span
+                                                                class="badge bg-light text-default ms-1">15rb</span></span>
+                                                    </li>
+                                                    <li class="mb-3">
+                                                        <span class="text-muted">Es Kopi Susu Lokal<span
+                                                                class="badge bg-light text-default ms-1">10rb</span></span>
+                                                    </li>
+                                                    <li class="mb-3">
+                                                        <span class="text-muted">Coffee Latte (C/H)<span
+                                                                class="badge bg-light text-default ms-1">15rb</span></span>
+                                                    </li>
+                                                    <li class="mb-3">
+                                                        <span class="text-muted">Vanilla Latte (C/H)<span
+                                                                class="badge bg-light text-default ms-1">15rb</span></span>
+                                                    </li>
+                                                    <li class="mb-3">
+                                                        <span class="text-muted">Caramel Latte (C/H)<span
+                                                                class="badge bg-light text-default ms-1">15rb</span></span>
+                                                    </li>
+                                                    <li class="mb-3">
+                                                        <span class="text-muted">Americano<span
+                                                                class="badge bg-light text-default ms-1">10rb</span></span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-12">
+                                            <div class="p-4 pricing-offer overflow-hidden">
+                                                <span class="pricing-offer-details shadow">
+                                                    <span class="fw-semibold">Cold</span>
+                                                </span>
+                                                <h6 class="fw-semibold text-center">Pure</h6>
+                                                <div class="py-4 d-flex align-items-center justify-content-center">
+                                                    <div class="pricing-svg1">
+
+                                                    </div>
+                                                </div>
+                                                <ul class="list-unstyled text-center fs-12 px-3 pt-3 mb-0">
+                                                    <li class="mb-3">
+                                                        <span class="text-muted">Aqua<span
+                                                                class="badge bg-light text-default ms-1">5rb</span></span>
+                                                    </li>
+                                                    <li class="mb-3">
+                                                        <span class="text-muted">Es Batu<span
+                                                                class="badge bg-light text-default ms-1">2rb</span></span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- End:: Section-8 -->
+
+
+            <!-- Start:: Section-5 -->
+            <section class="section landing-Features" id="snacks">
+                <div class="container text-center">
+                    <p class="fs-12 fw-semibold text-success mb-1"><span class="landing-section-heading">SNACKS</span></p>
+                    <h2 class="fw-semibold mb-2 text-fixed-white ">Try it</h2>
+                    <div class="row justify-content-center">
+                        <div class="col-xl-7">
+                            <p class="text-fixed-white op-8 fs-15 mb-3 fw-normal">It's Good</p>
+                        </div>
+                    </div>
+                    <div class="text-start">
+                        <div class="justify-content-center">
+                            <div class="">
+                                <div class="feature-logos mt-sm-5 flex-wrap">
+                                    <div class="ms-sm-5 ms-2 text-center">
+                                        <img src="../assets/images/media/landing/web/1.png" alt="image" class="featur-icon">
+                                        <h5 class="mt-3 text-fixed-white ">PisGor Sticks Rica Roa (10rb)</h5>
+                                    </div>
+                                    <div class="ms-sm-5 ms-2 text-center">
+                                        <img src="../assets/images/media/landing/web/2.png" alt="image" class="featur-icon">
+                                        <h5 class="mt-3 text-fixed-white ">PisGor Sticks Coklat Keju (12rb)</h5>
+                                    </div>
+                                    <div class="ms-sm-5 ms-2 text-center">
+                                        <img src="../assets/images/media/landing/web/4.png" alt="image" class="featur-icon">
+                                        <h5 class="mt-3 text-fixed-white ">Chicken Nuggets (12rb)</h5>
+                                    </div>
+                                    <div class="ms-sm-5 ms-2 text-center">
+                                        <img src="../assets/images/media/landing/web/5.png" alt="image" class="featur-icon">
+                                        <h5 class="mt-3 text-fixed-white ">French Fries (10rb)</h5>
+                                    </div>
+                                    <div class="ms-sm-5 ms-2 text-center">
+                                        <img src="../assets/images/media/landing/web/6.png" alt="image" class="featur-icon">
+                                        <h5 class="mt-3 text-fixed-white ">Sosis (12rb)</h5>
+                                    </div>
+                                    <div class="ms-sm-5 ms-2 text-center">
+                                        <img src="../assets/images/media/landing/web/6.png" alt="image" class="featur-icon">
+                                        <h5 class="mt-3 text-fixed-white ">Mix Platter (15rb)</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination mt-4"></div>
+                    </div>
+                </div>
+            </section>
+            <!-- End:: Section-5 -->
+
+            <!-- Start:: Section-10 -->
+            <section class="section" id="find-us">
+                <div class="container text-center">
+                    <p class="fs-12 fw-semibold text-success mb-1"><span class="landing-section-heading">FIND US</span></p>
+                    <h3 class="fw-semibold mb-2">Just follow the Map</h3>
+                    <div class="row justify-content-center">
+                        <div class="col-xl-9">
+                            <p class="text-muted fs-15 mb-5 fw-normal">hello there</p>
+                        </div>
+                    </div>
+                    <div class="row text-start">
+                        <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                            <div class="card custom-card border shadow-none">
+                                <div class="card-body p-0">
+                                    <iframe
+                                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3988.5956220198827!2d124.9858571!3d1.4185081!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x32870f0066095c2f%3A0x2bdc50d22af775ca!2sKedabar!5e0!3m2!1sen!2sde!4v1752584074372!5m2!1sen!2sde"
+                                        height="365" style="border:0;width:100%" allowfullscreen="" loading="lazy"
+                                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- End:: Section-10 -->
+
+            <!-- Start:: Section-11 -->
+            <section class="section landing-footer text-fixed-white" id="contact">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4 col-sm-6 col-12 mb-md-0 mb-3">
+                            <div class="px-4">
+                                <p class="fw-semibold mb-3"><a href="#"><img src="../assets/images/brand-logos/logo.png" alt=""></a></p>
+                                <p class="mb-2 op-6 fw-normal">
+                                    Sitou Timou Tumou Tou (a man lives to humanize other men). -Sam Ratulangi-
+                                </p>
+                                <p class="mb-0 op-6 fw-normal">Loving God, Loving each other.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6 col-12">
+                            <div class="px-4">
+                                <h6 class="fw-semibold text-fixed-white">CONTACT</h6>
+                                <ul class="list-unstyled fw-normal landing-footer-list">
+                                    <li>
+                                        <a href="javascript:void(0);" class="text-fixed-white op-6"><i
+                                                class="ri-home-4-line me-1 align-middle"></i> Airmadidi, Minahasa Utara 95371, ID</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);" class="text-fixed-white op-6"><i
+                                                class="ri-mail-line me-1 align-middle"></i> kedabar@gmail.com</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);" class="text-fixed-white op-6"><i
+                                                class="ri-phone-line me-1 align-middle"></i> +(62)-0000 1111</a>
+                                    </li>
+                                    <li class="mt-3">
+                                        <p class="mb-2 fw-semibold op-8">FOLLOW US ON :</p>
+                                        <div class="mb-0">
+                                            <div class="btn-list">
+                                                <button class="btn btn-sm btn-icon btn-primary-light btn-wave waves-effect waves-light">
+                                                    <i class="ri-facebook-line fw-bold"></i>
+                                                </button>
+                                                <button class="btn btn-sm btn-icon btn-warning-light btn-wave waves-effect waves-light">
+                                                    <i class="ri-instagram-line fw-bold"></i>
+                                                </button>
+                                                <button class="btn btn-sm btn-icon btn-danger-light btn-wave waves-effect waves-light">
+                                                    <i class="ri-youtube-line fw-bold"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- End:: Section-11 -->
+
+            <div class="text-center landing-main-footer py-3">
+                <span class="text-muted fs-15"> Copyright © <span id="year"></span> <a href="javascript:void(0);"
+                        class="text-primary fw-semibold"><u>KeDaBar</u></a>.
+                    Designed with <span class="fa fa-heart text-danger"></span> by <a href="javascript:void(0);"
+                        class="text-primary fw-semibold"><u>
+                            KDB</u>
+                    </a> All
+                    rights
+                    reserved
+                </span>
+            </div>
+
+        </div>
+        <!-- End::app-content -->
+
+    </div>
+
+    <div class="scrollToTop">
+        <span class="arrow"><i class="ri-arrow-up-s-fill fs-20"></i></span>
+    </div>
+    <div id="responsive-overlay"></div>
+
+    <!-- Popper JS -->
+    <script src="../assets/libs/@popperjs/core/umd/popper.min.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="../assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Color Picker JS -->
+    <script src="../assets/libs/@simonwep/pickr/pickr.es5.min.js"></script>
+
+    <!-- Choices JS -->
+    <script src="../assets/libs/choices.js/public/assets/scripts/choices.min.js"></script>
+
+    <!-- Swiper JS -->
+    <script src="../assets/libs/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Defaultmenu JS -->
+    <script src="../assets/js/defaultmenu.min.js"></script>
+
+    <!-- Internal Landing JS -->
+    <script src="../assets/js/landing.js"></script>
+
+    <!-- Node Waves JS-->
+    <script src="../assets/libs/node-waves/waves.min.js"></script>
+
+    <!-- Sticky JS -->
+    <script src="../assets/js/sticky.js"></script>
+
 </body>
+
 </html>
