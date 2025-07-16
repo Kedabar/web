@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr" data-nav-layout="horizontal" data-nav-style="menu-click" data-menu-position="fixed" data-theme-mode="dark"
+<html lang="en" dir="ltr" data-nav-layout="horizontal" data-nav-style="menu-click"  data-menu-position="fixed" data-theme-mode="dark"
     data-header-styles="dark" data-menu-styles="dark">
 
 <head>
@@ -38,7 +38,7 @@
     <link rel="stylesheet" href="assets/libs/choices.js/public/assets/styles/choices.min.css">
 
     <script>
-        localStorage.setItem('primaryRGB', [252, 186, 3]);
+        localStorage.setItem('primaryRGB', [0, 0, 0]);
     </script>
 
 
@@ -249,13 +249,6 @@
                             <!-- End::slide -->
                             <!-- Start::slide -->
                             <li class="slide">
-                                <a href="#snacks" class="side-menu__item">
-                                    <span class="side-menu__label">Snacks</span>
-                                </a>
-                            </li>
-                            <!-- End::slide -->
-                            <!-- Start::slide -->
-                            <li class="slide">
                                 <a href="#find-us" class="side-menu__item">
                                     <span class="side-menu__label">Find Us</span>
                                 </a>
@@ -293,24 +286,49 @@
             <div class="landing-banner" id="home">
                 <section class="section">
                     <div class="container main-banner-container pb-lg-0">
-                        <div class="row">
-                            <div class="col-xxl-7 col-xl-7 col-lg-7 col-md-8">
-                                <div class="py-lg-5">
-                                    <div class="mb-3">
-                                        <h5 class="fw-semibold text-fixed-white op-9">Estetisnya dapat, Dompet aman</h5>
-                                    </div>
-                                    <p class="landing-banner-heading mb-3">#1 Goal, Save Money <span class="text-secondary"><br />Kedai
-                                            Dadar
-                                            Barenda {KeDaBar}</span>
-                                    </p </div>
+                        <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0"
+                                class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
+                                aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"
+                                aria-label="Slide 3"></button>
+                        </div>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active" data-bs-interval="10000">
+                                <img src="assets/images/media/landing/food_land_mix.jpg" class="d-block w-100"
+                                    alt="...">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5>Estetisnya Dapat, Dompet Aman</h5>
                                 </div>
-                                <!-- <div class="col-xxl-5 col-xl-5 col-lg-5 col-md-4">
-                                    <div class="text-end landing-main-image landing-heading-img">
-                                        <img src="assets/images/media/landing/food1.jpg" alt="" class="img-fluid">
-                                    </div>
-                                </div> -->
+                            </div>
+                            <div class="carousel-item" data-bs-interval="2000">
+                                <img src="assets/images/media/landing/food_land_1.jpg" class="d-block w-100"
+                                    alt="...">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5>Taste Good</h5>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="assets/images/media/landing/ingrad_land_1.jpg" class="d-block w-100"
+                                    alt="...">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5>From the Locals to the Locals</h5>
+                                </div>
                             </div>
                         </div>
+                        <button class="carousel-control-prev" type="button"
+                            data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button"
+                            data-bs-target="#carouselExampleDark" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
                 </section>
             </div>
             <!-- End:: Section-1 -->
@@ -319,12 +337,6 @@
             <section class="section landing-testimonials section-bg" id="hot-deals">
                 <div class="container text-center">
                     <p class="fs-12 fw-semibold text-success mb-1"><span class="landing-section-heading">HOT DEALS</span></p>
-                    <h3 class="fw-semibold mb-2">We never failed to reach expectations</h3>
-                    <div class="row justify-content-center">
-                        <div class="col-xl-7">
-                            <p class="text-muted fs-15 mb-5 fw-normal">High demand</p>
-                        </div>
-                    </div>
                     <div class="swiper pagination-dynamic text-start">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
@@ -515,55 +527,33 @@
             <!-- End:: Section-2 -->
 
             <!-- Start:: Section-3 -->
-            <section class="section section-bg " id="follow-us">
-                <div class="container text-center position-relative">
+            <section class="section landing-Features" id="follow-us">
+                <div class="container text-center">
                     <p class="fs-12 fw-semibold text-success mb-1"><span class="landing-section-heading">FOLLOW US</span></p>
-                    <h3 class="fw-semibold mb-2">Social Media</h3>
-                    <div class="row justify-content-center">
-                        <div class="col-xl-7">
-                            <p class="text-muted fs-15 mb-5 fw-normal">We are proud to have you with us.</p>
-                        </div>
-                    </div>
-                    <div class="row  g-2 justify-content-center">
-                        <div class="col-xl-12">
-                            <div class="row justify-content-evenly">
-                                <div class="col-xl-2 col-lg-4 col-md-6 col-sm-6 col-12 mb-3">
-                                    <div class="p-3 text-center rounded-2 bg-white border">
-                                        <span class="mb-3 avatar avatar-lg avatar-rounded bg-primary-transparent">
-                                            <i class='ri-instagram-line fw-bold'></i>
-                                        </span>
-                                        <h3 class="fw-semibold mb-0 text-dark">@kedabar</h3>
-                                        <p class="mb-1 fs-14 op-7 text-muted ">
-                                            instagram
-                                        </p>
+                        <div class="justify-content-center">
+                            <div class="">
+                                <div class="feature-logos mt-sm-5 flex-wrap">
+                                    <div class="ms-sm-5 ms-2 text-center">
+                                        <a href="https://www.instagram.com/kedaidadarbarenda/" target="_blank" class="link">
+                                        <img src="assets/images/apps/instagram.png" alt="image" class="featur-icon">
+                                        <h6 class="mt-3 text-fixed-white ">@instagram</h6>
+                                        </a>
                                     </div>
-                                </div>
-                                <div class="col-xl-2 col-lg-4 col-md-6 col-sm-6 col-12 mb-3">
-                                    <div class="p-3 text-center rounded-2 bg-white border">
-                                        <span class="mb-3 avatar avatar-lg avatar-rounded bg-primary-transparent">
-                                            <i class='ri-facebook-line fw-bold'></i>
-                                        </span>
-                                        <h3 class="fw-semibold mb-0 text-dark">kedabar</h3>
-                                        <p class="mb-1 fs-14 op-7 text-muted ">
-                                            facebook
-                                        </p>
+                                    <div class="ms-sm-5 ms-2 text-center">
+                                        <a href="#" target="_blank" class="link">
+                                            <img src="assets/images/apps/facebook.png" alt="image" class="featur-icon">
+                                            <h6 class="mt-3 text-fixed-white ">facebook</h6>
+                                        </a>
                                     </div>
-                                </div>
-                                <div class="col-xl-2 col-lg-4 col-md-6 col-sm-6 col-12 mb-3">
-                                    <div class="p-3 text-center rounded-2 bg-white border">
-                                        <span class="mb-3 avatar avatar-lg avatar-rounded bg-primary-transparent">
-                                            <i class='ri-youtube-line fw-bold'></i>
-                                        </span>
-                                        <h3 class="fw-semibold mb-0 text-dark">Kedabar</h3>
-                                        <p class="mb-1 fs-14 op-7 text-muted ">
-                                            youtube
-                                        </p>
+                                    <div class="ms-sm-5 ms-2 text-center">
+                                        <a href="https://wa.me/+6285186887351" target="_blank" class="link">
+                                            <img src="assets/images/apps/whatsapp.png" alt="image" class="featur-icon">
+                                            <h6 class="mt-3 text-fixed-white ">whatsapp</h6>
+                                        </a>
                                     </div>
                                 </div>
                             </div>
-
                         </div>
-                    </div>
                 </div>
             </section>
             <!-- End:: Section-3 -->
@@ -573,406 +563,45 @@
             <section class="section section-bg" id="food">
                 <div class="container text-center">
                     <p class="fs-12 fw-semibold text-success mb-1"><span class="landing-section-heading">FOOD</span></p>
-                    <h3 class="fw-semibold mb-2">Good Food, Good Mood.</h3>
-                    <div class="row justify-content-center">
-                        <div class="col-xl-7">
-                            <p class="text-muted fs-15 mb-5 fw-normal">Save your money.</p>
+                    <div class="row align-items-center justify-content-center">
+                        <div class="col-md-5 col-xl-4 text-center mt-4 d-lg-block">
+                            <img src="assets/images/media/food2.jpg" width="350" alt="">
                         </div>
-                    </div>
-                    <div class="row text-start">
-                        <div class="col-xl-12">
-                            <div class="row gy-2">
-                                <div class="col-xl-6">
-                                    <div class="accordion accordion-customicon1 accordion-primary accordions-items-seperate"
-                                        id="accordionFAQ1">
-                                        <div class="accordion-item">
-                                            <h2 class="accordion-header" id="headingcustomicon1One">
-                                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                                                    data-bs-target="#collapsecustomicon1One" aria-expanded="true"
-                                                    aria-controls="collapsecustomicon1One">
-                                                    Nasi Jinggo Kedabar <span class="badge rounded-pill bg-light text-dark">8rb</span>
-                                                </button>
-                                            </h2>
-                                            <div id="collapsecustomicon1One" class="accordion-collapse collapse show"
-                                                aria-labelledby="headingcustomicon1One" data-bs-parent="#accordionFAQ1">
-                                                <div class="accordion-body">
-                                                    <strong>Small but Okay</strong>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="accordion-item">
-                                            <h2 class="accordion-header" id="headingcustomicon1Two">
-                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                                    data-bs-target="#collapsecustomicon1Two" aria-expanded="false"
-                                                    aria-controls="collapsecustomicon1Two">
-                                                    Nasi Kedabar Ori <span class="badge rounded-pill bg-light text-dark">10rb</span>
-                                                </button>
-                                            </h2>
-                                            <div id="collapsecustomicon1Two" class="accordion-collapse collapse"
-                                                aria-labelledby="headingcustomicon1Two" data-bs-parent="#accordionFAQ1">
-                                                <div class="accordion-body">
-                                                    <strong>it original.</strong>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="accordion-item">
-                                            <h2 class="accordion-header" id="headingcustomicon1Three">
-                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                                    data-bs-target="#collapsecustomicon1Three" aria-expanded="false"
-                                                    aria-controls="collapsecustomicon1Three">
-                                                    Nasi Kedabar Ayam Suwir <span class="badge rounded-pill bg-light text-dark">15rb</span>
-                                                </button>
-                                            </h2>
-                                            <div id="collapsecustomicon1Three" class="accordion-collapse collapse"
-                                                aria-labelledby="headingcustomicon1Three" data-bs-parent="#accordionFAQ1">
-                                                <div class="accordion-body">
-                                                    <strong>tagline.</strong> desc
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="accordion-item">
-                                            <h2 class="accordion-header" id="headingcustomicon1Four">
-                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                                    data-bs-target="#collapsecustomicon1Four" aria-expanded="false"
-                                                    aria-controls="collapsecustomicon1Four">
-                                                    Nasi Kedabar Ampela <span class="badge rounded-pill bg-light text-dark">15rb</span>
-                                                </button>
-                                            </h2>
-                                            <div id="collapsecustomicon1Four" class="accordion-collapse collapse"
-                                                aria-labelledby="headingcustomicon1Four" data-bs-parent="#accordionFAQ1">
-                                                <div class="accordion-body">
-                                                    <strong>This is the first item's accordion body.</strong>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="accordion-item">
-                                            <h2 class="accordion-header" id="headingcustomicon1Five">
-                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                                    data-bs-target="#collapsecustomicon1Five" aria-expanded="false"
-                                                    aria-controls="collapsecustomicon1Five">
-                                                    Nasi Kedabar Kulit <span class="badge rounded-pill bg-light text-dark">15rb</span>
-                                                </button>
-                                            </h2>
-                                            <div id="collapsecustomicon1Five" class="accordion-collapse collapse"
-                                                aria-labelledby="headingcustomicon1Five" data-bs-parent="#accordionFAQ1">
-                                                <div class="accordion-body">
-                                                    Description ...
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="accordion-item">
-                                            <h2 class="accordion-header" id="headingcustomicon1Six">
-                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                                    data-bs-target="#collapsecustomicon1Six" aria-expanded="false"
-                                                    aria-controls="collapsecustomicon1Six">
-                                                    Nasi Kedabar Tuna Rabe Rica <span
-                                                        class="badge rounded-pill bg-light text-dark">15rb</span>
-                                                </button>
-                                            </h2>
-                                            <div id="collapsecustomicon1Six" class="accordion-collapse collapse"
-                                                aria-labelledby="headingcustomicon1Six" data-bs-parent="#accordionFAQ1">
-                                                <div class="accordion-body">
-
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-xl-6">
-                                    <div class="accordion accordion-customicon1 accordion-primary accordions-items-seperate"
-                                        id="accordionFAQ2">
-                                        <div class="accordion-item">
-                                            <h2 class="accordion-header" id="headingcustomicon2Five">
-                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                                    data-bs-target="#collapsecustomicon2Five" aria-expanded="false"
-                                                    aria-controls="collapsecustomicon2Five">
-                                                    Nasi Kedabar Penyet <span class="badge rounded-pill bg-light text-dark">23rb</span>
-                                                </button>
-                                            </h2>
-                                            <div id="collapsecustomicon2Five" class="accordion-collapse collapse"
-                                                aria-labelledby="headingcustomicon2Five" data-bs-parent="#accordionFAQ2">
-                                                <div class="accordion-body">
-                                                    Abcd...
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="accordion-item">
-                                            <h2 class="accordion-header" id="headingcustomicon2Six">
-                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                                    data-bs-target="#collapsecustomicon2Six" aria-expanded="false"
-                                                    aria-controls="collapsecustomicon2Six">
-                                                    Mie Goreng Kedabar <span class="badge rounded-pill bg-light text-dark">15rb</span>
-                                                </button>
-                                            </h2>
-                                            <div id="collapsecustomicon2Six" class="accordion-collapse collapse"
-                                                aria-labelledby="headingcustomicon2Six" data-bs-parent="#accordionFAQ2">
-                                                <div class="accordion-body">
-                                                    abcd...
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="accordion-item">
-                                            <h2 class="accordion-header" id="headingcustomicon2One">
-                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                                    data-bs-target="#collapsecustomicon2One" aria-expanded="true"
-                                                    aria-controls="collapsecustomicon2One">
-                                                    Mie Kuah Kedabar <span class="badge rounded-pill bg-light text-dark">15rb</span>
-                                                </button>
-                                            </h2>
-                                            <div id="collapsecustomicon2One" class="accordion-collapse collapse "
-                                                aria-labelledby="headingcustomicon2One" data-bs-parent="#accordionFAQ2">
-                                                <div class="accordion-body">
-                                                    abcd...
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="accordion-item">
-                                            <h2 class="accordion-header" id="headingcustomicon2Two">
-                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                                    data-bs-target="#collapsecustomicon2Two" aria-expanded="false"
-                                                    aria-controls="collapsecustomicon2Two">
-                                                    Nasi Putih <span class="badge rounded-pill bg-light text-dark">5rb</span>
-                                                </button>
-                                            </h2>
-                                            <div id="collapsecustomicon2Two" class="accordion-collapse collapse"
-                                                aria-labelledby="headingcustomicon2Two" data-bs-parent="#accordionFAQ2">
-                                                <div class="accordion-body">
-                                                    <strong>Sepiring berdua.</strong>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="accordion-item">
-                                            <h2 class="accordion-header" id="headingcustomicon2Three">
-                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                                    data-bs-target="#collapsecustomicon2Three" aria-expanded="false"
-                                                    aria-controls="collapsecustomicon2Three">
-                                                    Dadar Barenda - <span class="badge rounded-pill bg-light text-dark">5rb</span>
-                                                </button>
-                                            </h2>
-                                            <div id="collapsecustomicon2Three" class="accordion-collapse collapse"
-                                                aria-labelledby="headingcustomicon2Three" data-bs-parent="#accordionFAQ2">
-                                                <div class="accordion-body">
-                                                    abcd ...
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="accordion-item">
-                                            <h2 class="accordion-header" id="headingcustomicon2Four">
-                                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                                                    data-bs-target="#collapsecustomicon2Four" aria-expanded="false"
-                                                    aria-controls="collapsecustomicon2Four">
-                                                    Topings - <span class="badge rounded-pill bg-light text-dark">5rb</span>
-                                                </button>
-                                            </h2>
-                                            <div id="collapsecustomicon2Four" class="accordion-collapse collapse show"
-                                                aria-labelledby="headingcustomicon2Four" data-bs-parent="#accordionFAQ2">
-                                                <div class="accordion-body">
-                                                    abcd...
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                        <div class="col-md-7 col-xl-8">
+                            <div class="my-4">
+                                <h2 class="fw-semibold mb-3 text-fixed-white">Good Food, Good Mood</h2>
+                                <a href="assets/images/media/food-menu.jpeg" target="_blank" class="btn btn-light btn-lg"><i class="ti ti-download"></i> Food Menu</a>
                             </div>
-                        </div>
+                        </div> 
                     </div>
                 </div>
             </section>
             <!-- End:: Section-4 -->
 
 
-            <!-- Start:: Section-8 -->
+            <!-- Start:: Section-5 -->
             <section class="section  " id="drinks">
                 <div class="container text-center">
                     <p class="fs-12 fw-semibold text-success mb-1"><span class="landing-section-heading">DRINKS</span></p>
-                    <h3 class="fw-semibold mb-2">Good Price, Good Taste</h3>
-                    <div class="row justify-content-center">
-                        <div class="col-xl-9">
-                            <p class="text-muted fs-15 mb-5 fw-normal">From the locals.</p>
-                        </div>
-                    </div>
-                    <div class="card custom-card overflow-hidden shadow-none">
-                        <div class="card-body p-0">
-                            <div class="tab-content" id="myTabContent">
-                                <div class="tab-pane show active p-0" id="non-coffee-pane" role="tabpanel" aria-labelledby="non-coffee"
-                                    tabindex="0">
-                                    <div class="row">
-                                        <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-12 border-end border-inline-end-dashed">
-                                            <div class="p-4">
-                                                <h6 class="fw-semibold text-center">Non Coffee</h6>
-                                                <div class="py-4 d-flex align-items-center justify-content-center">
-                                                    <div class="pricing-svg1">
-
-                                                    </div>
-                                                </div>
-                                                <ul class="list-unstyled text-center fs-12 px-3 pt-3 mb-0">
-                                                    <li class="mb-3">
-                                                        <span class="text-muted">Matcha Latte (C/H)<span
-                                                                class="badge bg-light text-default ms-1">17rb</span></span>
-                                                    </li>
-                                                    <li class="mb-3">
-                                                        <span class="text-muted">Thai Tea (C)<span
-                                                                class="badge bg-light text-default ms-1">15rb</span></span>
-                                                    </li>
-                                                    <li class="mb-3">
-                                                        <span class="text-muted">Taro Latte (C)<span
-                                                                class="badge bg-light text-default ms-1">15rb</span></span>
-                                                    </li>
-                                                    <li class="mb-3">
-                                                        <span class="text-muted">Red Velvet Latte (C)<span
-                                                                class="badge bg-light text-default ms-1">15rb</span></span>
-                                                    </li>
-                                                    <li class="mb-3">
-                                                        <span class="text-muted">Chocolate (C/H)<span
-                                                                class="badge bg-light text-default ms-1">15rb</span></span>
-                                                    </li>
-                                                    <li class="mb-3">
-                                                        <span class="text-muted">Teh Manis/ Tawar (C/H)<span
-                                                                class="badge bg-light text-default ms-1">5rb</span></span>
-                                                    </li>
-                                                    <li class="mb-3">
-                                                        <span class="text-muted">Es Lemonade Kedabar<span
-                                                                class="badge bg-light text-default ms-1">5rb</span></span>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-12 border-end border-inline-end-dashed">
-                                            <div class="p-4">
-                                                <h6 class="fw-semibold text-center">Coffee</h6>
-                                                <div class="py-4 d-flex align-items-center justify-content-center">
-                                                    <div class="pricing-svg1">
-
-                                                    </div>
-                                                </div>
-                                                <ul class="list-unstyled text-center fs-12 px-3 pt-3 mb-0">
-                                                    <li class="mb-3">
-                                                        <span class="text-muted">Es Kopi Mokadabar<span
-                                                                class="badge bg-light text-default ms-1">17rb</span></span>
-                                                    </li>
-                                                    <li class="mb-3">
-                                                        <span class="text-muted">Es Kopi Susu Gulmer<span
-                                                                class="badge bg-light text-default ms-1">15rb</span></span>
-                                                    </li>
-                                                    <li class="mb-3">
-                                                        <span class="text-muted">Es Kopi Susu Lokal<span
-                                                                class="badge bg-light text-default ms-1">10rb</span></span>
-                                                    </li>
-                                                    <li class="mb-3">
-                                                        <span class="text-muted">Coffee Latte (C/H)<span
-                                                                class="badge bg-light text-default ms-1">15rb</span></span>
-                                                    </li>
-                                                    <li class="mb-3">
-                                                        <span class="text-muted">Vanilla Latte (C/H)<span
-                                                                class="badge bg-light text-default ms-1">15rb</span></span>
-                                                    </li>
-                                                    <li class="mb-3">
-                                                        <span class="text-muted">Caramel Latte (C/H)<span
-                                                                class="badge bg-light text-default ms-1">15rb</span></span>
-                                                    </li>
-                                                    <li class="mb-3">
-                                                        <span class="text-muted">Americano<span
-                                                                class="badge bg-light text-default ms-1">10rb</span></span>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-12">
-                                            <div class="p-4 pricing-offer overflow-hidden">
-                                                <span class="pricing-offer-details shadow">
-                                                    <span class="fw-semibold">Cold</span>
-                                                </span>
-                                                <h6 class="fw-semibold text-center">Pure</h6>
-                                                <div class="py-4 d-flex align-items-center justify-content-center">
-                                                    <div class="pricing-svg1">
-
-                                                    </div>
-                                                </div>
-                                                <ul class="list-unstyled text-center fs-12 px-3 pt-3 mb-0">
-                                                    <li class="mb-3">
-                                                        <span class="text-muted">Aqua<span
-                                                                class="badge bg-light text-default ms-1">5rb</span></span>
-                                                    </li>
-                                                    <li class="mb-3">
-                                                        <span class="text-muted">Es Batu<span
-                                                                class="badge bg-light text-default ms-1">2rb</span></span>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                    <div class="row align-items-center justify-content-center">
+                        <div class="col-md-7 col-xl-8">
+                            <div class="my-4">
+                                <h2 class="fw-semibold mb-3 text-fixed-white">Good Price, Good Taste</h2>
+                                <a href="assets/images/media/drinks-menu.jpeg" target="_blank" class="btn btn-light btn-lg"><i class="ti ti-download"></i> Drinks Menu</a>
                             </div>
+                        </div> 
+                        <div class="col-md-5 col-xl-4 text-center mt-4 d-lg-block">
+                            <img src="assets/images/media/drinks1.jpg" width="350" alt="">
                         </div>
-                    </div>
-                </div>
-            </section>
-            <!-- End:: Section-8 -->
-
-
-            <!-- Start:: Section-5 -->
-            <section class="section landing-Features" id="snacks">
-                <div class="container text-center">
-                    <p class="fs-12 fw-semibold text-success mb-1"><span class="landing-section-heading">SNACKS</span></p>
-                    <h2 class="fw-semibold mb-2 text-fixed-white ">Try it</h2>
-                    <div class="row justify-content-center">
-                        <div class="col-xl-7">
-                            <p class="text-fixed-white op-8 fs-15 mb-3 fw-normal">It's Good</p>
-                        </div>
-                    </div>
-                    <div class="text-start">
-                        <div class="justify-content-center">
-                            <div class="">
-                                <div class="feature-logos mt-sm-5 flex-wrap">
-                                    <div class="ms-sm-5 ms-2 text-center">
-                                        <img src="assets/images/media/landing/web/1.png" alt="image" class="featur-icon">
-                                        <h5 class="mt-3 text-fixed-white ">PisGor Sticks Rica Roa <span
-                                                class="badge rounded-pill bg-light text-dark">10rb</span></h5>
-                                    </div>
-                                    <div class="ms-sm-5 ms-2 text-center">
-                                        <img src="assets/images/media/landing/web/2.png" alt="image" class="featur-icon">
-                                        <h5 class="mt-3 text-fixed-white ">PisGor Sticks Coklat Keju <span
-                                                class="badge rounded-pill bg-light text-dark">12rb</span></h5>
-                                    </div>
-                                    <div class="ms-sm-5 ms-2 text-center">
-                                        <img src="assets/images/media/landing/web/4.png" alt="image" class="featur-icon">
-                                        <h5 class="mt-3 text-fixed-white ">Chicken Nuggets <span
-                                                class="badge rounded-pill bg-light text-dark">12rb</span></h5>
-                                    </div>
-                                    <div class="ms-sm-5 ms-2 text-center">
-                                        <img src="assets/images/media/landing/web/5.png" alt="image" class="featur-icon">
-                                        <h5 class="mt-3 text-fixed-white ">French Fries <span
-                                                class="badge rounded-pill bg-light text-dark">10rb</span></h5>
-                                    </div>
-                                    <div class="ms-sm-5 ms-2 text-center">
-                                        <img src="assets/images/media/landing/web/6.png" alt="image" class="featur-icon">
-                                        <h5 class="mt-3 text-fixed-white ">Sosis <span
-                                                class="badge rounded-pill bg-light text-dark">12rb</span></h5>
-                                    </div>
-                                    <div class="ms-sm-5 ms-2 text-center">
-                                        <img src="assets/images/media/landing/web/6.png" alt="image" class="featur-icon">
-                                        <h5 class="mt-3 text-fixed-white ">Mix Platter <span
-                                                class="badge rounded-pill bg-light text-dark">15rb</span></h5>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-pagination mt-4"></div>
                     </div>
                 </div>
             </section>
             <!-- End:: Section-5 -->
 
-            <!-- Start:: Section-10 -->
-            <section class="section" id="find-us">
+            <!-- Start:: Section-6 -->
+            <section class="section landing-Features" id="find-us">
                 <div class="container text-center">
                     <p class="fs-12 fw-semibold text-success mb-1"><span class="landing-section-heading">FIND US</span></p>
-                    <h3 class="fw-semibold mb-2">Just follow the Map</h3>
-                    <div class="row justify-content-center">
-                        <div class="col-xl-9">
-                            <p class="text-muted fs-15 mb-5 fw-normal">hello there</p>
-                        </div>
-                    </div>
                     <div class="row text-start">
                         <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12">
                             <div class="card custom-card border shadow-none">
@@ -987,9 +616,9 @@
                     </div>
                 </div>
             </section>
-            <!-- End:: Section-10 -->
+            <!-- End:: Section-6 -->
 
-            <!-- Start:: Section-11 -->
+            <!-- Start:: Section-7 -->
             <section class="section landing-footer text-fixed-white" id="contact">
                 <div class="container">
                     <div class="row">
@@ -1023,15 +652,21 @@
                                         <p class="mb-2 fw-semibold op-8">FOLLOW US ON :</p>
                                         <div class="mb-0">
                                             <div class="btn-list">
-                                                <button class="btn btn-sm btn-icon btn-primary-light btn-wave waves-effect waves-light">
-                                                    <i class="ri-facebook-line fw-bold"></i>
-                                                </button>
-                                                <button class="btn btn-sm btn-icon btn-warning-light btn-wave waves-effect waves-light">
-                                                    <i class="ri-instagram-line fw-bold"></i>
-                                                </button>
-                                                <button class="btn btn-sm btn-icon btn-danger-light btn-wave waves-effect waves-light">
-                                                    <i class="ri-youtube-line fw-bold"></i>
-                                                </button>
+                                                <a href="https://www.instagram.com/kedaidadarbarenda/" target="_blank">
+                                                    <button class="btn btn-sm btn-icon btn-warning-light btn-wave waves-effect waves-light">
+                                                        <i class="ri-instagram-line fw-bold"></i>
+                                                    </button>
+                                                </a>
+                                                <a href="#">
+                                                    <button class="btn btn-sm btn-icon btn-secondary-light btn-wave waves-effect waves-light">
+                                                        <i class="ri-facebook-line fw-bold"></i>
+                                                    </button>
+                                                </a>
+                                                <a href="https://wa.me/+6285186887351" target="_blank">
+                                                    <button class="btn btn-sm btn-icon btn-success-light btn-wave waves-effect waves-light">
+                                                        <i class="ri-whatsapp-line fw-bold"></i>
+                                                    </button>
+                                                </a>
                                             </div>
                                         </div>
                                     </li>
@@ -1041,13 +676,13 @@
                     </div>
                 </div>
             </section>
-            <!-- End:: Section-11 -->
+            <!-- End:: Section-7 -->
 
             <div class="text-center landing-main-footer py-3">
                 <span class="text-muted fs-15"> Copyright © <span id="year"></span> <a href="javascript:void(0);"
-                        class="text-primary fw-semibold"><u>KeDaBar</u></a>.
+                        class="text-danger fw-semibold"><u>KeDaBar</u></a>.
                     Designed with <span class="fa fa-heart text-danger"></span> by <a href="javascript:void(0);"
-                        class="text-primary fw-semibold"><u>
+                        class="text-secondary fw-semibold"><u>
                             KDB</u>
                     </a> All
                     rights
