@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr" data-nav-layout="horizontal" data-nav-style="menu-click" data-menu-position="fixed" data-theme-mode="light">
+<html lang="en" dir="ltr" data-nav-layout="horizontal" data-nav-style="menu-click" data-menu-position="fixed" data-theme-mode="dark"
+    data-header-styles="dark" data-menu-styles="dark">
 
 <head>
 
@@ -37,13 +38,7 @@
     <link rel="stylesheet" href="assets/libs/choices.js/public/assets/styles/choices.min.css">
 
     <script>
-        if (localStorage.ynexlandingdarktheme) {
-            document.querySelector("html").setAttribute("data-theme-mode", "dark")
-        }
-        if (localStorage.ynexlandingrtl) {
-            document.querySelector("html").setAttribute("dir", "rtl")
-            document.querySelector("#style")?.setAttribute("href", "assets/libs/bootstrap/css/bootstrap.rtl.min.css");
-        }
+        localStorage.setItem('primaryRGB', [252, 186, 3]);
     </script>
 
 
@@ -595,7 +590,7 @@
                                                 <button class="accordion-button" type="button" data-bs-toggle="collapse"
                                                     data-bs-target="#collapsecustomicon1One" aria-expanded="true"
                                                     aria-controls="collapsecustomicon1One">
-                                                    Nasi Jinggo Kedabar - 8rb
+                                                    Nasi Jinggo Kedabar <span class="badge rounded-pill bg-light text-dark">8rb</span>
                                                 </button>
                                             </h2>
                                             <div id="collapsecustomicon1One" class="accordion-collapse collapse show"
@@ -610,7 +605,7 @@
                                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                                     data-bs-target="#collapsecustomicon1Two" aria-expanded="false"
                                                     aria-controls="collapsecustomicon1Two">
-                                                    Nasi Kedabar Ori - 10rb
+                                                    Nasi Kedabar Ori <span class="badge rounded-pill bg-light text-dark">10rb</span>
                                                 </button>
                                             </h2>
                                             <div id="collapsecustomicon1Two" class="accordion-collapse collapse"
@@ -625,7 +620,7 @@
                                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                                     data-bs-target="#collapsecustomicon1Three" aria-expanded="false"
                                                     aria-controls="collapsecustomicon1Three">
-                                                    Nasi Kedabar Ayam Suwir - 15rb
+                                                    Nasi Kedabar Ayam Suwir <span class="badge rounded-pill bg-light text-dark">15rb</span>
                                                 </button>
                                             </h2>
                                             <div id="collapsecustomicon1Three" class="accordion-collapse collapse"
@@ -640,7 +635,7 @@
                                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                                     data-bs-target="#collapsecustomicon1Four" aria-expanded="false"
                                                     aria-controls="collapsecustomicon1Four">
-                                                    Nasi Kedabar Ampela - 15rb
+                                                    Nasi Kedabar Ampela <span class="badge rounded-pill bg-light text-dark">15rb</span>
                                                 </button>
                                             </h2>
                                             <div id="collapsecustomicon1Four" class="accordion-collapse collapse"
@@ -655,7 +650,7 @@
                                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                                     data-bs-target="#collapsecustomicon1Five" aria-expanded="false"
                                                     aria-controls="collapsecustomicon1Five">
-                                                    Nasi Kedabar Kulit -15rb
+                                                    Nasi Kedabar Kulit <span class="badge rounded-pill bg-light text-dark">15rb</span>
                                                 </button>
                                             </h2>
                                             <div id="collapsecustomicon1Five" class="accordion-collapse collapse"
@@ -670,7 +665,8 @@
                                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                                     data-bs-target="#collapsecustomicon1Six" aria-expanded="false"
                                                     aria-controls="collapsecustomicon1Six">
-                                                    Nasi Kedabar Tuna Rabe Rica - 15rb
+                                                    Nasi Kedabar Tuna Rabe Rica <span
+                                                        class="badge rounded-pill bg-light text-dark">15rb</span>
                                                 </button>
                                             </h2>
                                             <div id="collapsecustomicon1Six" class="accordion-collapse collapse"
@@ -690,7 +686,7 @@
                                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                                     data-bs-target="#collapsecustomicon2Five" aria-expanded="false"
                                                     aria-controls="collapsecustomicon2Five">
-                                                    Nasi Kedabar Penyet - 23rb
+                                                    Nasi Kedabar Penyet <span class="badge rounded-pill bg-light text-dark">23rb</span>
                                                 </button>
                                             </h2>
                                             <div id="collapsecustomicon2Five" class="accordion-collapse collapse"
@@ -705,7 +701,7 @@
                                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                                     data-bs-target="#collapsecustomicon2Six" aria-expanded="false"
                                                     aria-controls="collapsecustomicon2Six">
-                                                    Mie Goreng Kedabar - 15rb
+                                                    Mie Goreng Kedabar <span class="badge rounded-pill bg-light text-dark">15rb</span>
                                                 </button>
                                             </h2>
                                             <div id="collapsecustomicon2Six" class="accordion-collapse collapse"
@@ -720,7 +716,7 @@
                                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                                     data-bs-target="#collapsecustomicon2One" aria-expanded="true"
                                                     aria-controls="collapsecustomicon2One">
-                                                    Mie Kuah Kedabar - 15rb
+                                                    Mie Kuah Kedabar <span class="badge rounded-pill bg-light text-dark">15rb</span>
                                                 </button>
                                             </h2>
                                             <div id="collapsecustomicon2One" class="accordion-collapse collapse "
@@ -735,7 +731,7 @@
                                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                                     data-bs-target="#collapsecustomicon2Two" aria-expanded="false"
                                                     aria-controls="collapsecustomicon2Two">
-                                                    Nasi Putih - 5rb
+                                                    Nasi Putih <span class="badge rounded-pill bg-light text-dark">5rb</span>
                                                 </button>
                                             </h2>
                                             <div id="collapsecustomicon2Two" class="accordion-collapse collapse"
@@ -750,7 +746,7 @@
                                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                                     data-bs-target="#collapsecustomicon2Three" aria-expanded="false"
                                                     aria-controls="collapsecustomicon2Three">
-                                                    Dadar Barenda - 5rb
+                                                    Dadar Barenda - <span class="badge rounded-pill bg-light text-dark">5rb</span>
                                                 </button>
                                             </h2>
                                             <div id="collapsecustomicon2Three" class="accordion-collapse collapse"
@@ -765,7 +761,7 @@
                                                 <button class="accordion-button" type="button" data-bs-toggle="collapse"
                                                     data-bs-target="#collapsecustomicon2Four" aria-expanded="false"
                                                     aria-controls="collapsecustomicon2Four">
-                                                    Topings - 5rb
+                                                    Topings - <span class="badge rounded-pill bg-light text-dark">5rb</span>
                                                 </button>
                                             </h2>
                                             <div id="collapsecustomicon2Four" class="accordion-collapse collapse show"
@@ -930,27 +926,33 @@
                                 <div class="feature-logos mt-sm-5 flex-wrap">
                                     <div class="ms-sm-5 ms-2 text-center">
                                         <img src="assets/images/media/landing/web/1.png" alt="image" class="featur-icon">
-                                        <h5 class="mt-3 text-fixed-white ">PisGor Sticks Rica Roa (10rb)</h5>
+                                        <h5 class="mt-3 text-fixed-white ">PisGor Sticks Rica Roa <span
+                                                class="badge rounded-pill bg-light text-dark">10rb</span></h5>
                                     </div>
                                     <div class="ms-sm-5 ms-2 text-center">
                                         <img src="assets/images/media/landing/web/2.png" alt="image" class="featur-icon">
-                                        <h5 class="mt-3 text-fixed-white ">PisGor Sticks Coklat Keju (12rb)</h5>
+                                        <h5 class="mt-3 text-fixed-white ">PisGor Sticks Coklat Keju <span
+                                                class="badge rounded-pill bg-light text-dark">12rb</span></h5>
                                     </div>
                                     <div class="ms-sm-5 ms-2 text-center">
                                         <img src="assets/images/media/landing/web/4.png" alt="image" class="featur-icon">
-                                        <h5 class="mt-3 text-fixed-white ">Chicken Nuggets (12rb)</h5>
+                                        <h5 class="mt-3 text-fixed-white ">Chicken Nuggets <span
+                                                class="badge rounded-pill bg-light text-dark">12rb</span></h5>
                                     </div>
                                     <div class="ms-sm-5 ms-2 text-center">
                                         <img src="assets/images/media/landing/web/5.png" alt="image" class="featur-icon">
-                                        <h5 class="mt-3 text-fixed-white ">French Fries (10rb)</h5>
+                                        <h5 class="mt-3 text-fixed-white ">French Fries <span
+                                                class="badge rounded-pill bg-light text-dark">10rb</span></h5>
                                     </div>
                                     <div class="ms-sm-5 ms-2 text-center">
                                         <img src="assets/images/media/landing/web/6.png" alt="image" class="featur-icon">
-                                        <h5 class="mt-3 text-fixed-white ">Sosis (12rb)</h5>
+                                        <h5 class="mt-3 text-fixed-white ">Sosis <span
+                                                class="badge rounded-pill bg-light text-dark">12rb</span></h5>
                                     </div>
                                     <div class="ms-sm-5 ms-2 text-center">
                                         <img src="assets/images/media/landing/web/6.png" alt="image" class="featur-icon">
-                                        <h5 class="mt-3 text-fixed-white ">Mix Platter (15rb)</h5>
+                                        <h5 class="mt-3 text-fixed-white ">Mix Platter <span
+                                                class="badge rounded-pill bg-light text-dark">15rb</span></h5>
                                     </div>
                                 </div>
                             </div>
